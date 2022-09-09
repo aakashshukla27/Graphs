@@ -71,10 +71,9 @@ namespace Graphs.Base
 
         /// <summary>
         /// reverses a graph 
-        /// </summary>
-        /// <param name="G">input graph</param>
+        /// </summary>        
         /// <returns>reversed graph</returns>
-        public DirectedGraph ReverseGraph(DirectedGraph G)
+        public DirectedGraph ReverseGraph()
         {
             DirectedGraph r = new DirectedGraph(V);
             for(int i =0; i< V; i++)
@@ -86,5 +85,12 @@ namespace Graphs.Base
             }
             return r;
         }
+
+        /// <summary>
+        /// adjacency list of a vertex
+        /// </summary>
+        /// <param name="v">Vertex number</param>
+        /// <returns>Adjacency List of vertex</returns>
+        public LinkedList<int> AdjacencyList(int v) => adj[v];
     }
 }
