@@ -10,12 +10,10 @@ namespace Graphs.TopologicalOrder
 {
     public class TopologicalOrder
     {
-        private bool[] visited;
         private Stack<int> reversePost;
 
         public TopologicalOrder(DirectedGraph G)
         {
-            visited = new bool[G.Vertex()];
             reversePost = new Stack<int>();
             DirectedCycle dc = new DirectedCycle(G);
             if (!dc.hasCycle())
